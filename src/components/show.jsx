@@ -5,7 +5,7 @@ import { useOutsideClick } from "../hooks/use-outside-click";
 import firstWebsite from "../assets/firstWebsite.png"
 import secondWebsite from "../assets/secondWebsite.png"
 import thirdWebsite from "../assets/thirdWebsite.png"
-
+import forthWebsite from "../assets/forthWebsite.png"
 
 
 export default function ExpandableCardDemo() {
@@ -44,7 +44,7 @@ export default function ExpandableCardDemo() {
         </AnimatePresence>
         <AnimatePresence>
             {active && typeof active === "object" ? (
-                <div className="fixed inset-0  grid place-items-center z-[100]">
+                <div className="fixed inset-0 grid place-items-center z-[100]">
                     <motion.button
                         key={`button-${active.title}-${id}`}
                         layout
@@ -118,7 +118,7 @@ export default function ExpandableCardDemo() {
                 </div>
             ) : null}
         </AnimatePresence>
-        <ul className="max-w-2xl mx-auto w-full gap-4">
+        <ul className="max-w-2xl mx-auto w-full gap-4 bg-gray-500 rounded-2xl">
             {cards.map((card, index) => (
                 <motion.div
                     layoutId={`card-${card.title}-${id}`}
@@ -206,7 +206,7 @@ const cards = [
     },
     {
         description: "Second Website",
-        title: "3D Background Hover with Message",
+        title: "3D BG Message",
         src: secondWebsite,
         ctaText: "View",
         ctaLink: "https://jrvs26.github.io/irish/#/hello",
@@ -227,6 +227,19 @@ const cards = [
         content: () => {
             return (
                 (<p>appreciation of her talking to me.
+                </p>)
+            );
+        },
+    },
+    {
+        description: "Forth Website",
+        title: "Iphone V2 Template",
+        src: forthWebsite,
+        ctaText: "View",
+        ctaLink: "https://jrvs26.github.io/airishjs",
+        content: () => {
+            return (
+                (<p>updating the UI of Iphone Template
                 </p>)
             );
         },
