@@ -3,7 +3,7 @@ import ExpandableCardDemo from "./components/show.jsx"
 
 function App() {
   return (
-    <div className="App h-screen flex justify-center items-center">
+    <div className="App">
       <ExpandableCardDemo />
     </div>
   );
